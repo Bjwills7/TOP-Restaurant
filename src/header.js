@@ -1,11 +1,11 @@
-const container = document.querySelector("#content");
+const body = document.querySelector("body");
 const header = document.createElement("div");
 const homeBtn = document.createElement("button");
 const menuBtn = document.createElement("button");
 const contactBtn = document.createElement("button");
 
 function createHeader() {
-  container.appendChild(header);
+  body.prepend(header);
   header.classList.add("header");
 }
 
