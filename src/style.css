@@ -5,15 +5,30 @@ body {
   margin: 0;
   padding: 0;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5%;
+}
+
 .header {
   display: flex;
   justify-content: end;
   gap: 10px;
   height: 6dvh;
+  width: 100dvw;
   background-color: aquamarine;
 }
 
 button {
   width: 80px;
   background-color: red;
+}
+
+#content {
+  background-color: blue;
+  min-height: 80dvh;
+  width: 80dvw;
+  border-radius: 10px;
 }
