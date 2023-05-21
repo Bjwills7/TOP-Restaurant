@@ -32,3 +32,18 @@ button {
   width: 80dvw;
   border-radius: 10px;
 }
+
+/* home styles */
+.home-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr), 2fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.home-content div {
+  width: 80%;
+  border: 2px solid green;
+  padding: 10px;
+}

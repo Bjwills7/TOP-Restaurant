@@ -55,6 +55,7 @@ function initHome() {
   createTitle();
   createSectionOne();
   createSectionTwo();
+  container.className = "home-content";
 }
 
 export { initHome };
