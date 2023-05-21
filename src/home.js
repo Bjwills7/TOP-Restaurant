@@ -20,21 +20,27 @@ const listElements = {
 
 function createTitle() {
   container.appendChild(title);
+  title.classList.add("home-title");
   title.textContent = "Glizzy Factory";
 }
 
 function createSectionOne() {
   container.appendChild(sectionOne);
+  sectionOne.classList.add("section-one");
   sectionOne.appendChild(sectionOnePara);
+  sectionOnePara.classList.add("section-one-para");
   sectionOnePara.textContent =
     "Glizzy Factory microwaves a hotdog better than anyone else";
   sectionOne.appendChild(sectionOneTitle);
+  sectionOneTitle.classList.add("sectionOneTitle");
   sectionOneTitle.textContent = "Glizzy Goblin";
 }
 
 function createSectionTwo() {
   container.appendChild(sectionTwo);
+  sectionTwo.classList.add("section-two");
   sectionTwo.appendChild(sectionTwoTitle);
+  sectionTwoTitle.classList.add("section-two-title");
   sectionTwoTitle.textContent = "Hours of Operation";
   sectionTwo.appendChild(list);
 
