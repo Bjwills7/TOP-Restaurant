@@ -1,7 +1,7 @@
 import { initHeader } from "./header";
 import { initHome } from "./home";
 import { initMenu } from "./menu";
-import { contactCreate, contacts } from "./contact";
+import { initContact } from "./contact";
 import "./style.css";
 
 initHeader();
@@ -9,6 +9,7 @@ initHome();
 
 const homeButton = document.querySelector(".homeBtn");
 const menuButton = document.querySelector(".menuBtn");
+const contactButton = document.querySelector(".contactBtn");
 
 homeButton.addEventListener("click", () => {
   clearContainer();
@@ -18,6 +19,10 @@ menuButton.addEventListener("click", () => {
   clearContainer();
   initMenu();
 });
+contactButton.addEventListener("click", () => {
+  clearContainer();
+  initContact();
+});
 
 function clearContainer() {
   const container = document.querySelector("#content");
@@ -25,7 +30,3 @@ function clearContainer() {
     container.removeChild(container.firstChild);
   }
 }
-
-console.log(contacts);
-contactCreate("joe", "hotdogguy", "123-234-4567", "bone-man@hotdog.com");
-console.log(contacts);
