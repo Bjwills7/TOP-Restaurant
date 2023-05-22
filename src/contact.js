@@ -1,13 +1,6 @@
 const container = document.querySelector("#content");
 
-const contacts = {
-  contact1: {
-    name: "hotdog man 1",
-    job: "microwave operator",
-    phone: "123-456-7890",
-    email: "john123@hotdog.com",
-  },
-};
+const contacts = {};
 
 Object.defineProperty(contacts, "length", {
   enumerable: false,
@@ -19,6 +12,29 @@ Object.defineProperty(contacts, "length", {
     return count;
   },
 });
+
+// Add new contacts here
+addContact(
+  "hotdog man 1",
+  "Microwave operator",
+  "123-456-7890",
+  "john123@hotdog.com"
+);
+
+addContact(
+  "Frank Weiner",
+  "Product Tester",
+  "1-800-hot-dogs",
+  "GlizzyGuzzler@hotdog.com"
+);
+
+addContact(
+  "Jefferey Johnson",
+  "Hotdog Security Admin",
+  "720-470-3420",
+  "jeff123@hotdog.com"
+);
+// End of contacts
 
 function addContact(name, job, phone, email) {
   const obj = { name, job, phone, email };
