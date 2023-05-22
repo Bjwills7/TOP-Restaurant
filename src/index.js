@@ -1,6 +1,7 @@
 import { initHeader } from "./header";
 import { initHome } from "./home";
 import { initMenu } from "./menu";
+import { contactCreate, contacts } from "./contact";
 import "./style.css";
 
 initHeader();
@@ -24,3 +25,7 @@ function clearContainer() {
     container.removeChild(container.firstChild);
   }
 }
+
+console.log(contacts);
+contactCreate("joe", "hotdogguy", "123-234-4567", "bone-man@hotdog.com");
+console.log(contacts);

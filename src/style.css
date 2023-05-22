@@ -63,7 +63,7 @@ button {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 2px dotted violet;
+  border: 5px dotted orange;
 }
 
 .menu-content img {
