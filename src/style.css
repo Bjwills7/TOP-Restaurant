@@ -29,9 +29,10 @@ button {
 
 #content {
   background-color: blue;
-  height: 100%;
-  width: 80dvw;
   border-radius: 10px;
+  width: min(500px, 80%);
+  padding-bottom: 30px;
+  gap: 10px;
 }
 
 /* home styles */
@@ -41,6 +42,7 @@ button {
   grid-template-rows: repeat(2, 1fr), 2fr;
   justify-items: center;
   align-items: center;
+  padding: 10px;
 }
 
 .home-content div {
@@ -57,7 +59,6 @@ button {
   grid-template-rows: min-content;
   justify-items: center;
   padding: 10px;
-  gap: 10px;
 }
 
 .menu-content div {
@@ -66,6 +67,7 @@ button {
   align-items: center;
   text-align: center;
   border: 5px dotted orange;
+  padding: 10px;
 }
 
 .menu-content img,
@@ -75,3 +77,6 @@ button {
 }
 
 /* contact styles */
+.contact-content div {
+  padding: 10px;
+}
