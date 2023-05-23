@@ -1,3 +1,5 @@
+import { clearContainer } from "./clearContent";
+
 const container = document.querySelector("#content");
 const title = document.createElement("h1");
 
@@ -42,6 +44,7 @@ function createSectionTwo() {
   sectionTwo.appendChild(sectionTwoTitle);
   sectionTwoTitle.classList.add("section-two-title");
   sectionTwoTitle.textContent = "Hours of Operation";
+  clearContainer(list);
   sectionTwo.appendChild(list);
 
   for (const day in listElements) {

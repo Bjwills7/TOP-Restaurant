@@ -16,7 +16,8 @@ body {
   display: flex;
   justify-content: end;
   gap: 10px;
-  height: 6dvh;
+  min-height: 50px;
+  height: 50px;
   width: 100dvw;
   background-color: aquamarine;
 }
@@ -28,7 +29,7 @@ button {
 
 #content {
   background-color: blue;
-  min-height: 80dvh;
+  height: 100%;
   width: 80dvw;
   border-radius: 10px;
 }

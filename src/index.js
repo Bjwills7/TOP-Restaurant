@@ -2,31 +2,26 @@ import { initHeader } from "./header";
 import { initHome } from "./home";
 import { initMenu } from "./menu";
 import { initContact } from "./contact";
+import { clearContainer } from "./clearContent";
 import "./style.css";
 
 initHeader();
 initHome();
 
+const container = document.querySelector("#content");
 const homeButton = document.querySelector(".homeBtn");
 const menuButton = document.querySelector(".menuBtn");
 const contactButton = document.querySelector(".contactBtn");
 
 homeButton.addEventListener("click", () => {
-  clearContainer();
+  clearContainer(container);
   initHome();
 });
 menuButton.addEventListener("click", () => {
-  clearContainer();
+  clearContainer(container);
   initMenu();
 });
 contactButton.addEventListener("click", () => {
-  clearContainer();
+  clearContainer(container);
   initContact();
 });
-
-function clearContainer() {
-  const container = document.querySelector("#content");
-  while (container.firstChild) {
-    container.removeChild(container.firstChild);
-  }
-}
