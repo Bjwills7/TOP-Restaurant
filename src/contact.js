@@ -1,3 +1,6 @@
+import confusedGuy from "./images/confused-guy.jpg";
+import weinerDog from "./images/black-weiner-dog.jpg";
+import securityGuy from "./images/security-guy.jpg";
 const container = document.querySelector("#content");
 
 const contacts = {};
@@ -18,26 +21,29 @@ addContact(
   "hotdog man 1",
   "Microwave operator",
   "123-456-7890",
-  "john123@hotdog.com"
+  "john123@hotdog.com",
+  confusedGuy
 );
 
 addContact(
   "Frank Weiner",
   "Product Tester",
   "1-800-hot-dogs",
-  "GlizzyGuzzler@hotdog.com"
+  "GlizzyGuzzler@hotdog.com",
+  weinerDog
 );
 
 addContact(
   "Jefferey Johnson",
   "Hotdog Security Admin",
   "720-470-3420",
-  "jeff123@hotdog.com"
+  "jeff123@hotdog.com",
+  securityGuy
 );
 // End of contacts
 
-function addContact(name, job, phone, email) {
-  const obj = { name, job, phone, email };
+function addContact(name, job, phone, email, image) {
+  const obj = { name, job, phone, email, image };
   const objKey = `contact${contacts.length() + 1}`;
   Object.assign(contacts, { [objKey]: { ...obj } });
 }
@@ -57,14 +63,17 @@ function createContent() {
 
     const list = document.createElement("ul");
     for (const key in contacts[contact]) {
-      if (key.toString() !== "name") {
+      if (key.toString() !== "name" && key.toString() !== "image") {
         const listItem = document.createElement("li");
         listItem.textContent = contacts[contact][key];
         list.appendChild(listItem);
       }
     }
 
-    contactContainer.append(name, list);
+    const img = new Image();
+    img.src = contacts[contact].image;
+
+    contactContainer.append(name, list, img);
     container.appendChild(contactContainer);
   }
 }

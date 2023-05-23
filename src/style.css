@@ -49,7 +49,8 @@ button {
 }
 
 /* menu styles */
-.menu-content {
+.menu-content,
+.contact-content {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content;
@@ -66,7 +67,10 @@ button {
   border: 5px dotted orange;
 }
 
-.menu-content img {
+.menu-content img,
+.contact-content img {
   width: 100px;
   aspect-ratio: 1 / 1;
 }
+
+/* contact styles */
