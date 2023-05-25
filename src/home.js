@@ -1,9 +1,12 @@
 import { clearContainer } from "./clearContent";
+import goblin from "./images/goblin.png";
 
 const container = document.querySelector("#content");
 const title = document.createElement("h1");
 
 const sectionOne = document.createElement("div");
+const sectionOneImage = new Image();
+sectionOneImage.src = goblin;
 const sectionOnePara = document.createElement("p");
 const sectionOneTitle = document.createElement("h3");
 
@@ -29,13 +32,15 @@ function createTitle() {
 function createSectionOne() {
   container.appendChild(sectionOne);
   sectionOne.classList.add("section-one");
+  sectionOne.appendChild(sectionOneImage);
+  sectionOneImage.className = "section-one-image";
   sectionOne.appendChild(sectionOnePara);
   sectionOnePara.classList.add("section-one-para");
   sectionOnePara.textContent =
-    "Glizzy Factory microwaves a hotdog better than anyone else";
+    "Glizzy Factory microwaves a hotdog better than anyone else!";
   sectionOne.appendChild(sectionOneTitle);
   sectionOneTitle.classList.add("sectionOneTitle");
-  sectionOneTitle.textContent = "Glizzy Goblin";
+  sectionOneTitle.textContent = "- Glizzy Goblin";
 }
 
 function createSectionTwo() {
